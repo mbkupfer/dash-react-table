@@ -1,0 +1,24 @@
+/* Fixes the header and column alignment */
+
+.ReactTable .rt-thead {
+   overflow-y: scroll;
+   scrollbar-width: none;
+
+   /* IE properties */
+   scrollbar-track-color:  #FFF;
+   scrollbar-3dlight-color:  #FFF;
+   scrollbar-darkshadow-color:  #FFF;
+   scrollbar-arrow-color:  #FFF;
+}
+
+.ReactTable .rt-tbody {
+   scrollbar-width: none;
+}
+
+.ReactTable .rt-thead::-webkit-scrollbar { 
+  background: transparent; 
+}
+
+
+
+

@@ -1,0 +1,240 @@
+{
+  "src/lib/components/DashReactTable.react.js": {
+    "description": "ExampleComponent is an example component.\r\nIt takes a property, `label`, and\r\ndisplays it.\r\nIt renders an input with the property `value`\r\nwhich is editable by the user.",
+    "displayName": "DashReactTable",
+    "methods": [],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks"
+      },
+      "data": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "object"
+          }
+        },
+        "required": false,
+        "description": "An array of dictionaries with each dictionary corresponding \r\nto a row. The keys will refere to columns while the values refer\r\nto the data that will be placed in that row's cell."
+      },
+      "columns": {
+        "type": {
+          "name": "arrayOf",
+          "value": {
+            "name": "shape",
+            "value": {
+              "Header": {
+                "name": "string",
+                "description": "The column's label",
+                "required": false
+              },
+              "accessor": {
+                "name": "string",
+                "description": "The corresponding key that links \r\nthe column to the data array.",
+                "required": false
+              },
+              "sortable": {
+                "name": "bool",
+                "description": "Overrides the table option",
+                "required": false
+              },
+              "resizable": {
+                "name": "bool",
+                "description": "Overides the table option",
+                "required": false
+              },
+              "filterable": {
+                "name": "bool",
+                "description": "Overides the table option",
+                "required": false
+              },
+              "show": {
+                "name": "bool",
+                "description": "Used to hide a column",
+                "required": false
+              },
+              "width": {
+                "name": "number",
+                "description": "A hardcoded width for the column. This overides both min and max width options",
+                "required": false
+              },
+              "minWidth": {
+                "name": "number",
+                "description": "A minimum width for the column (default: 100)",
+                "required": false
+              },
+              "maxWidth": {
+                "name": "number",
+                "description": "A maximum width for the column",
+                "required": false
+              },
+              "className": {
+                "name": "string",
+                "description": "Class name for the cells of this column.",
+                "required": false
+              },
+              "style": {
+                "name": "object",
+                "description": "Inline style for the cells of this column.",
+                "required": false
+              },
+              "headerClassName": {
+                "name": "string",
+                "description": "Class name for the header of this column.",
+                "required": false
+              },
+              "headerStyle": {
+                "name": "object",
+                "description": "Inline style for the header of this column.",
+                "required": false
+              }
+            }
+          }
+        },
+        "required": false,
+        "description": "An aray of dictionaries containing properties to each column. \r\nAt the very least, every column must have a \"Header\" and \"accessor\" \r\nproperty. The \"Header\" will be the title of the column and the \"accessor\"\r\nwill link that column to the data array of dictionaries."
+      },
+      "showPagination": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Turn on pagination. Seting this to true will improve performance\r\non larger tables.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "showPaginationTop": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Show pagination controls on top of table (default: false)"
+      },
+      "showPaginationBottom": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Show pagination controls on bottom of table (default: true)"
+      },
+      "showPageSizeOptions": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Show options dropdown to edit results per page when pagination is enabled."
+      },
+      "pageSizeOptions": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Options for show page size when pageination is enabled. (default: [5, 10, 20, 25, 50, 100])"
+      },
+      "defaultPageSize": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Default page size. (default: 20)"
+      },
+      "minRows": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "controls the minimum number of rows to display - default will be \"pageSize\"\r\nNOTE: if you set minRows to 0 then you get rid of empty padding rows BUT your table formatting will also \r\nlook strange when there are ZERO rows in the table."
+      },
+      "sortable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Table level sorting (default: true). This can be overided for specific columns.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "resizable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Table level resizing (default: true). This can be overided for specific columns.",
+        "defaultValue": {
+          "value": "true",
+          "computed": false
+        }
+      },
+      "filterable": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Table level filtering (default: true). This can be overided for specific columns.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "className": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Add classname \"-striped\" and/or \"-highlight\" to enable these features."
+      },
+      "style": {
+        "type": {
+          "name": "object"
+        },
+        "required": false,
+        "description": "Inline table styles"
+      },
+      "conditionalFormatting": {
+        "type": {
+          "name": "shape",
+          "value": {
+            "domain": {
+              "name": "array",
+              "description": "The discrete values to create conditional buckets. For N values N+1 buckets are created.",
+              "required": false
+            },
+            "range": {
+              "name": "arrayOf",
+              "value": {
+                "name": "object"
+              },
+              "description": "An array of styles that will map to the domain. If N domain values are given, then the \r\nrange must have N+1 values. Note: this must be a dictionary with camelCase css values.",
+              "required": false
+            },
+            "ignore": {
+              "name": "arrayOf",
+              "value": {
+                "name": "string"
+              },
+              "description": "Columns that do not get this style must be provided in an optional array.",
+              "required": false
+            }
+          }
+        },
+        "required": false,
+        "description": "Custom conditional color formatting. Currently only supports d3.scaleThreshold(). \r\n\r\nFor more info See: https://github.com/d3/d3-scale/blob/master/README.md#threshold-scales"
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called whenever any of the\r\nproperties change"
+      }
+    }
+  }
+}

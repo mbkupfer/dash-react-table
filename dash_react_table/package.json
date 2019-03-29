@@ -1,0 +1,55 @@
+{
+  "name": "dash_react_table",
+  "version": "0.0.1",
+  "description": "Dash component for React-Table",
+  "main": "build/index.js",
+  "scripts": {
+    "start": "webpack-serve ./webpack.serve.config.js --open",
+    "validate-init": "python _validate_init.py",
+    "prepublish": "npm run validate-init",
+    "build:js-dev": "webpack --mode development",
+    "build:js": "webpack --mode production",
+    "build:py": "dash-generate-components ./src/lib/components dash_react_table",
+    "build:py-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:py)",
+    "build:all": "npm run build:js && npm run build:js-dev && npm run build:py",
+    "build:all-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:all)",
+    "compile-demo": "babel src\\demo --out-dir src\\demo\\.compiled --source-maps --watch"
+  },
+  "author": "Maxim Kupfer mbkupfer@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "core-js": "^3.0.0",
+    "d3-array": "^1.2.4",
+    "d3-scale": "^2.2.2",
+    "ramda": "^0.26.1",
+    "react-table": "6.8.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.5",
+    "copyfiles": "^2.0.0",
+    "css-loader": "^0.28.11",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-react": "^7.9.1",
+    "npm": "^6.1.0",
+    "react": ">=0.14",
+    "react-docgen": "^2.20.1",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-middleware": "3.6.0",
+    "webpack-serve": "^1.0.2"
+  },
+  "engines": {
+    "node": ">=8.11.0",
+    "npm": ">=6.1.0"
+  }
+}
