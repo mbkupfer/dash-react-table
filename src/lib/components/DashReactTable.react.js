@@ -237,7 +237,7 @@ DashReactTable.propTypes = {
     /**
      * Options for show page size when pageination is enabled. (default: [5, 10, 20, 25, 50, 100])
      */
-    pageSizeOptions: PropTypes.bool,
+    pageSizeOptions: PropTypes.arrayOf(PropTypes.number),
 
     /**
      * Default page size. (default: 20)
@@ -262,7 +262,7 @@ DashReactTable.propTypes = {
     resizable: PropTypes.bool,
 
     /**
-     * Table level filtering (default: true). This can be overided for specific columns.
+     * Table level filtering (default: false). This can be overided for specific columns.
      */
     filterable: PropTypes.bool,
 
