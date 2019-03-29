@@ -25,14 +25,14 @@ on larger tables.
 - showPaginationTop (boolean; optional): Show pagination controls on top of table (default: false)
 - showPaginationBottom (boolean; optional): Show pagination controls on bottom of table (default: true)
 - showPageSizeOptions (boolean; optional): Show options dropdown to edit results per page when pagination is enabled.
-- pageSizeOptions (boolean; optional): Options for show page size when pageination is enabled. (default: [5, 10, 20, 25, 50, 100])
+- pageSizeOptions (list; optional): Options for show page size when pageination is enabled. (default: [5, 10, 20, 25, 50, 100])
 - defaultPageSize (number; optional): Default page size. (default: 20)
 - minRows (number; optional): controls the minimum number of rows to display - default will be "pageSize"
 NOTE: if you set minRows to 0 then you get rid of empty padding rows BUT your table formatting will also 
 look strange when there are ZERO rows in the table.
 - sortable (boolean; optional): Table level sorting (default: true). This can be overided for specific columns.
 - resizable (boolean; optional): Table level resizing (default: true). This can be overided for specific columns.
-- filterable (boolean; optional): Table level filtering (default: true). This can be overided for specific columns.
+- filterable (boolean; optional): Table level filtering (default: false). This can be overided for specific columns.
 - className (string; optional): Add classname "-striped" and/or "-highlight" to enable these features.
 - style (dict; optional): Inline table styles
 - conditionalFormatting (optional): Custom conditional color formatting. Currently only supports d3.scaleThreshold(). 

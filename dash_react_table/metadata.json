@@ -132,7 +132,10 @@
       },
       "pageSizeOptions": {
         "type": {
-          "name": "bool"
+          "name": "arrayOf",
+          "value": {
+            "name": "number"
+          }
         },
         "required": false,
         "description": "Options for show page size when pageination is enabled. (default: [5, 10, 20, 25, 50, 100])"
@@ -178,7 +181,7 @@
           "name": "bool"
         },
         "required": false,
-        "description": "Table level filtering (default: true). This can be overided for specific columns.",
+        "description": "Table level filtering (default: false). This can be overided for specific columns.",
         "defaultValue": {
           "value": "false",
           "computed": false
