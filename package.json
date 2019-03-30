@@ -1,6 +1,6 @@
 {
   "name": "dash_react_table",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Dash component for React-Table",
   "repository": {
     "type": "git",
@@ -16,7 +16,8 @@
     "build:py": "dash-generate-components ./src/lib/components dash_react_table",
     "build:py-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:py)",
     "build:all": "npm run build:js && npm run build:js-dev && npm run build:py",
-    "build:all-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:all)"
+    "build:all-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:all)",
+    "deploy": "npm run build:all && twine upload dist/* && npm publish"
   },
   "author": "Maxim Kupfer <mbkupfer@gmail.com>",
   "license": "MIT",

@@ -5,11 +5,16 @@ from dash.development.base_component import Component, _explicitize_args
 
 class DashReactTable(Component):
     """A DashReactTable component.
-ExampleComponent is an example component.
-It takes a property, `label`, and
-displays it.
-It renders an input with the property `value`
-which is editable by the user.
+DashReactTable is a decalaritive version of react-table, built for dash.
+
+At a minimum, it must have `data` and `column` properties.
+`data` must be a uniform list of dicts with the arbitrary amount of keys representing the 
+columns and values representing that row's data. This can be done very easily 
+in pandas using df.to_json(orient='records'). As for `columns`, this is also a list
+of dictionaries, but it has a defined set of properties. At the very least, it must contain 
+`Header` and `accessor` properties, referring to the column's title and identifying key in 
+the data property, respectively. Columns also have many other properties that are referenced 
+both in the docstring as well as in the react-table docs.
 
 Keyword arguments:
 - id (string; optional): The ID used to identify this component in Dash callbacks

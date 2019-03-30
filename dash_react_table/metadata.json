@@ -1,6 +1,6 @@
 {
   "src/lib/components/DashReactTable.react.js": {
-    "description": "ExampleComponent is an example component.\r\nIt takes a property, `label`, and\r\ndisplays it.\r\nIt renders an input with the property `value`\r\nwhich is editable by the user.",
+    "description": "DashReactTable is a decalaritive version of react-table, built for dash.\r\n\r\nAt a minimum, it must have `data` and `column` properties.\r\n`data` must be a uniform list of dicts with the arbitrary amount of keys representing the \r\ncolumns and values representing that row's data. This can be done very easily \r\nin pandas using df.to_json(orient='records'). As for `columns`, this is also a list\r\nof dictionaries, but it has a defined set of properties. At the very least, it must contain \r\n`Header` and `accessor` properties, referring to the column's title and identifying key in \r\nthe data property, respectively. Columns also have many other properties that are referenced \r\nboth in the docstring as well as in the react-table docs.",
     "displayName": "DashReactTable",
     "methods": [],
     "props": {

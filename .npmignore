@@ -23,3 +23,9 @@ config
 .travis.yml
 CHANGELOG.md
 README.md
+
+#python related
+venv*
+dist/
+*.pyc
+*.log
