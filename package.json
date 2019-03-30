@@ -17,7 +17,7 @@
     "build:py-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:py)",
     "build:all": "npm run build:js && npm run build:js-dev && npm run build:py",
     "build:all-activated": "(. venv/bin/activate || venv\\scripts\\activate && npm run build:all)",
-    "deploy": "npm run build:all && twine upload dist/* && npm publish"
+    "deploy": "npm run build:all && python setup.py sdist && twine upload dist/* && npm publish"
   },
   "author": "Maxim Kupfer <mbkupfer@gmail.com>",
   "license": "MIT",

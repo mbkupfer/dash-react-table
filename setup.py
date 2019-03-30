@@ -30,5 +30,5 @@ setup(
     long_description=long_description,
     long_description_content_type='text/markdown',
     install_requires=["dash>=0.38.0"],
-    url=package['repository']['url']
+    url='https://github.com/mbkupfer/dash-react-table.git'
 )
